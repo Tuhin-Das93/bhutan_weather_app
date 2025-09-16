@@ -9,6 +9,18 @@ import plotly.express as px
 from geopy.distance import distance
 from datetime import datetime, timedelta
 
+#=====================================
+# Bucket S3
+s3_bucket_name = os.getenv("S3_BUCKET_NAME")
+s3_region = os.getenv("S3_REGION")
+aws_access_key_id = os.getenv("AWS_ACCESS_KEY_ID")
+aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+#=======================================
+print(s3_bucket_name)
+print(s3_region)
+print(aws_access_key_id)
+print(aws_secret_access_key)
+
 # ==========================
 # Load CSV from a specific directory
 # ==========================
@@ -433,3 +445,4 @@ with tab_weather_forecast:
             st.dataframe(df_places)
         else:
             st.info("No geographical places found within 10 km.")
+
