@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 # Load CSV from a specific directory
 # ==========================
 @st.cache_data
-def load_data(directory=r"D:\deployment code\bhutan_app\csv_files"):
+def load_data(directory="csv_files"):
     csv_files = [f for f in os.listdir(directory) if f.endswith(".csv")]
     if not csv_files:
         st.error(f"No CSV files found in {directory}")
@@ -433,3 +433,4 @@ with tab_weather_forecast:
             st.dataframe(df_places)
         else:
             st.info("No geographical places found within 10 km.")
+
