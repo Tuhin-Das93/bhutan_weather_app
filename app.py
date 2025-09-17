@@ -33,7 +33,7 @@ import base64
 # Load CSVs from a specific directory (_1 and _2) and merge forecast columns
 # ==========================
 @st.cache_data
-def load_data(directory=r"D:\deployment code\bhutan_app\csv_files"):
+def load_data(directory="csv_files"):
     import re
 
     # Get all CSVs in the folder
@@ -745,5 +745,6 @@ st.sidebar.markdown("""
         <p style="color:white; font-weight:bold; margin-top:5px;">Omdena Bhutan</p>
     </div>
 """, unsafe_allow_html=True)
+
 
 
